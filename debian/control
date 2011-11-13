@@ -1,0 +1,59 @@
+Source: gasol-ppa
+Section: misc
+Priority: optional
+Maintainer: Gasol Wu <gasol.wu@gmail.com>
+Standards-Version: 3.8.4
+Homepage: http://github.com/Gasol/gasol-ppa
+
+Package: gasol-basic
+Architecture: all
+Depends: byobu,
+ vim,
+ git,
+ unrar | unrar-free,
+ unzip,
+ irssi,
+ rcconf,
+ tree,
+ most
+Description: Meta-package for basic environment by gasol
+ metapackage
+
+Package: gasol-desktop
+Architecture: all
+Depends: google-chrome-stable,
+ vlc,
+ language-selector-common,
+ ttf-inconsolata,
+ ttf-droid,
+ sun-java6-plugin | icedtea-plugin
+Description: Meta-package for desktop environment by gasol
+ metapackage
+
+Package: gasol-dev
+Architecture: all
+Depends: vim,
+ byobu,
+ git,
+ packaging-dev,
+ sun-java6-jdk | openjdk-6-jdk,
+ subversion,
+ tig
+Recommends: bzr,
+ ack-grep,
+ mercurial
+Suggests: ccache
+Description: Meta-package for developement environment by gasol
+ metapackage
+
+Package: gasol-admin
+Architecture: all
+Depends: htop,
+ lftp,
+ mtr-tiny,
+ parted,
+ traceroute,
+ curl
+Suggests: wireshark
+Description: Meta-package for system management by gasol
+ metapackage
