@@ -16,6 +16,7 @@ Depends: byobu,
  rcconf,
  tree,
  most,
+ ${vendor-specific:basic:Depends},
  ${misc:Depends}
 Description: Meta-package for basic environment by gasol
  metapackage
@@ -28,6 +29,7 @@ Depends: google-chrome-stable,
  ttf-inconsolata,
  ttf-droid,
  sun-java6-plugin | icedtea-plugin,
+ ${vendor-specific:desktop:Depends},
  ${misc:Depends}
 Description: Meta-package for desktop environment by gasol
  metapackage
@@ -37,10 +39,10 @@ Architecture: all
 Depends: vim,
  byobu,
  git,
- packaging-dev,
  sun-java6-jdk | openjdk-6-jdk,
  subversion,
  tig,
+ ${vendor-specific:dev:Depends},
  ${misc:Depends}
 Recommends: bzr,
  ack-grep,
@@ -57,6 +59,7 @@ Depends: htop,
  parted,
  traceroute,
  curl,
+ ${vendor-specific:admin:Depends},
  ${misc:Depends}
 Suggests: wireshark
 Description: Meta-package for system management by gasol

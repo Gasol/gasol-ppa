@@ -1,4 +1,35 @@
 #!/usr/bin/make -f
 
+Ubuntu_DEV_DEPENDS := packaging-dev
+Debian_DEV_DEPENDS := build-essential, \
+		      debhelper, \
+		      devscripts, \
+		      dput | dupload, \
+		      lintian, \
+		      pbuilder | cowbuilder | sbuild, \
+		      quilt, \
+		      apt-file, \
+		      autoconf, \
+		      automake, \
+		      autotools-dev, \
+		      bzr-builddeb, \
+		      cdbs, \
+		      cmake, \
+		      debian-policy, \
+		      developer-reference, \
+		      dh-autoreconf, \
+		      git-buildpackage, \
+		      gnupg, \
+		      libtool, \
+		      piuparts
+
+VENDOR ?= $(shell dpkg-vendor --query Vendor)
+
 %:
 	dh $@
+
+override_dh_gencontrol:
+	dh_gencontrol -- -Vvendor-specific:basic:Depends="$($(VENDOR)_BASIC_DEPENDS)" \
+			 -Vvendor-specific:desktop:Depends="$($(VENDOR)_DESKTOP_DEPENDS)" \
+			 -Vvendor-specific:dev:Depends="$($(VENDOR)_DEV_DEPENDS)" \
+			 -Vvendor-specific:admin:Depends="$($(VENDOR)_ADMIN_DEPENDS)"
