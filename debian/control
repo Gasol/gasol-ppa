@@ -1,8 +1,9 @@
 Source: gasol-ppa
 Section: misc
 Priority: optional
+Build-Depends: debhelper (>= 7.0.50~)
 Maintainer: Gasol Wu <gasol.wu@gmail.com>
-Standards-Version: 3.8.4
+Standards-Version: 3.9.2
 Homepage: http://github.com/Gasol/gasol-ppa
 
 Package: gasol-basic
