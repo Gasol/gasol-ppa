@@ -16,6 +16,9 @@ Depends: byobu,
  rcconf,
  tree,
  most,
+ language-selector-common,
+ ttf-inconsolata,
+ ttf-droid,
  ${vendor-specific:basic:Depends},
  ${misc:Depends}
 Description: Meta-package for basic environment by gasol
@@ -25,9 +28,6 @@ Package: gasol-desktop
 Architecture: all
 Depends: google-chrome-stable,
  vlc,
- language-selector-common,
- ttf-inconsolata,
- ttf-droid,
  sun-java6-plugin | icedtea-plugin,
  ${vendor-specific:desktop:Depends},
  ${misc:Depends}
