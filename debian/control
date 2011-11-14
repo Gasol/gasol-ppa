@@ -15,7 +15,8 @@ Depends: byobu,
  irssi,
  rcconf,
  tree,
- most
+ most,
+ ${misc:Depends}
 Description: Meta-package for basic environment by gasol
  metapackage
 
@@ -26,7 +27,8 @@ Depends: google-chrome-stable,
  language-selector-common,
  ttf-inconsolata,
  ttf-droid,
- sun-java6-plugin | icedtea-plugin
+ sun-java6-plugin | icedtea-plugin,
+ ${misc:Depends}
 Description: Meta-package for desktop environment by gasol
  metapackage
 
@@ -38,7 +40,8 @@ Depends: vim,
  packaging-dev,
  sun-java6-jdk | openjdk-6-jdk,
  subversion,
- tig
+ tig,
+ ${misc:Depends}
 Recommends: bzr,
  ack-grep,
  mercurial
@@ -53,7 +56,8 @@ Depends: htop,
  mtr-tiny,
  parted,
  traceroute,
- curl
+ curl,
+ ${misc:Depends}
 Suggests: wireshark
 Description: Meta-package for system management by gasol
  metapackage
